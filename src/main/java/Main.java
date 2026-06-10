@@ -1,10 +1,12 @@
 public class Main {
-    /*
-    ***********************************************
-    * This is the driver code. Don't change it!!!
-    ***********************************************
-    */
+    
     public static void main(String[] args) {
+
+        /*
+        ***********************************************
+        * This is the driver code. Don't change it!!!
+        ***********************************************
+        */
         String[] orders = {
             "Regular Electronics:100:2 Books:20:1",
             "Member Clothing:50:4",
