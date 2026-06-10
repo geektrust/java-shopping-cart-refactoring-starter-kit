@@ -12,9 +12,20 @@ public class Main {
             "Gold Books:20:1",
             "Regular Toys:30:2"
         };
+        
+        if (args.length == 0) {
+            System.out.println("Arguments are required to run the program.");
+            return;
+        }
+
+        String input = args[0].trim();
 
         for (String order : orders) {
-            ShoppingCart.handle(order);
+            if (order.equals(input)) {
+                ShoppingCart.handle(order);
+                return;
+            }
+
         }
     }
 }
