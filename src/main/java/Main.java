@@ -5,26 +5,16 @@ public class Main {
     ***********************************************
     */
     public static void main(String[] args) {
-        if (args.length == 0) {
-            System.out.println(
-                "Please provide input: <customerType> <category:price:quantity> ..."
-            );
-            return;
+        String[] orders = {
+            "Regular Electronics:100:2 Books:20:1",
+            "Member Clothing:50:4",
+            "VIP Electronics:100:1 Clothing:50:2",
+            "Gold Books:20:1",
+            "Regular Toys:30:2"
+        };
+
+        for (String order : orders) {
+            ShoppingCart.handle(order);
         }
-
-        handle(args[0]);
-    }
-
-    private static void handle(String input) {
-        if (input == null || input.trim().isEmpty()) {
-            System.out.println(
-                "Invalid input. Format: <customerType> <category:price:quantity> ..."
-            );
-            return;
-        }
-
-        // Forward the complete input string to ShoppingCart
-        String[] shoppingCartArgs = { input.trim() };
-        ShoppingCart.main(shoppingCartArgs);
     }
 }
